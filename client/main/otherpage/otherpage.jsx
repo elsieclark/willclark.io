@@ -4,16 +4,16 @@ const _           = require('lodash');
 
 
 const OtherPage = createClass({
-	getDefaultProps : function(){
-		return {
+    getDefaultProps: function() {
+        return {
 
-		};
-	},
-	render : function(){
-		return <div className='OtherPage'>
+        };
+    },
+    render: function() {
+        return <div className='OtherPage'>
 			OtherPage Component Ready.
-		</div>;
-	}
+        </div>;
+    }
 });
 
 module.exports = OtherPage;
