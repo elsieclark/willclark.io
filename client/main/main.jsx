@@ -13,7 +13,7 @@ const PageBody    = require('../shared/pagebody/pagebody.jsx');
 const PageContent = require('../shared/pagecontent/pagecontent.jsx');
 const LowBar      = require('../shared/lowbar/lowbar.jsx');
 
-const pageList = require('../../build/pages.json');
+const pageList = require('../pages.json');
 
 const navBarLinks = [
     {
