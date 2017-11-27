@@ -4,8 +4,8 @@ const createRouter = require('pico-router').createRouter;
 const Link         = require('pico-router').Link;
 const React        = require('react');
 
-//const HomePage   = require('./homepage/homepage.jsx');
-//const OtherPage  = require('./otherpage/otherpage.jsx');
+const HomePage   = require('../pages/index.jsx');
+//const OtherPage  = require('../pages/otherpage.jsx');
 const FourOhFour = require('./fourohfour/fourohfour.jsx');
 
 const TopBar      = require('../shared/topbar/topbar.jsx');
@@ -13,24 +13,7 @@ const PageBody    = require('../shared/pagebody/pagebody.jsx');
 const PageContent = require('../shared/pagecontent/pagecontent.jsx');
 const LowBar      = require('../shared/lowbar/lowbar.jsx');
 
-const pages = require('../../build/pages.json');
-_.assign(pages, {
-    '/': <FourOhFour />,
-    '/*': <FourOhFour />
-});
-const Router = createRouter(pages);
-
-/*
-recursive('../pages/')
-    .then((files) => {
-        let routerData;
-        console.log('Beta')
-        _.forEach(files, (file) => {
-            console.log('Gamma')
-            console.log(file)
-        });
-    })
-    .catch(console.log)*/
+const pageList = require('../../build/pages.json');
 
 const navBarLinks = [
     {
@@ -52,16 +35,20 @@ const Main = createClass({
     getDefaultProps: function() {
         return {
             url: '/',
-            Router: <div />,
-            routeTable: {},
         };
     },
 
-    componentDidMount: function() {
-        const routeTable = this.props.routeTable;
-        routeTable['/*'] = <FourOhFour />;
-        const Router = createRouter(routeTable);
-        this.setState({ Router });
+    getInitialState: function() {
+        const pageDir = {};
+        _.forEach(pageList, (value, key) => {
+            const NewPage = require(`../pages/${value}`);
+            pageDir[key] = <NewPage />;
+        });
+        pageDir['/*'] = <FourOhFour />;
+        const router = createRouter(pageDir);
+        return {
+            router,
+        };
     },
 
     render: function() {
@@ -69,7 +56,7 @@ const Main = createClass({
             <TopBar pages={navBarLinks} />
             <PageBody>
                 <PageContent>
-                    <Router defaultUrl={this.props.url} />
+                    <this.state.router defaultUrl={this.props.url} />
                 </PageContent>
                 <LowBar />
             </PageBody>

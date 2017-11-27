@@ -2,9 +2,9 @@ const _           = require('lodash');
 const createClass = require('create-react-class');
 const React       = require('react');
 
-const Break      = require('../client/shared/components/break/break.jsx');
-const Paragraph  = require('../client/shared/components/paragraph/paragraph.jsx');
-const TitleBlock = require('../client/shared/components/titleblock/titleblock.jsx');
+const Break      = require('../shared/components/break/break.jsx');
+const Paragraph  = require('../shared/components/paragraph/paragraph.jsx');
+const TitleBlock = require('../shared/components/titleblock/titleblock.jsx');
 
 
 const HomePage = createClass({

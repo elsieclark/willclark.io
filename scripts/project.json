@@ -12,7 +12,8 @@
     "*.ttf"
   ],
   "shared": [
-    "./client"
+    "./client",
+    "./client/pages/otherpage.jsx"
   ],
   "libs": [
     "react",
