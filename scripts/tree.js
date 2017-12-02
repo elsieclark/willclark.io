@@ -9,10 +9,7 @@ module.exports = () => {
                 .filter((filePath) => filePath.slice(-4) === '.jsx')
                 .map((filePath) => {
                     const sliceAmount = filePath.slice(-10) === '/index.jsx' ? -9 : -4;
-                    return [filePath.slice(12, sliceAmount), `./${filePath.slice(7)}`];
-                })
-                .map(([uri, filePath]) => {
-                    return `    '${uri}': require('${filePath}'),\n`;
+                    return `    '${filePath.slice(12, sliceAmount)}': require('./${filePath.slice(7)}'),\n`;
                 });
         })
         .then((routes) => {
