@@ -4,12 +4,12 @@ const readDir = require('recursive-readdir');
 
 module.exports = () => {
     return readDir('./client/pages')
-        .then((files) => {
-            return files
-                .filter((file) => file.slice(-4) === '.jsx')
-                .map((file) => {
-                    const sliceAmount = file.slice(-10) === '/index.jsx' ? -9 : -4;
-                    return [file.slice(12, sliceAmount), `./${file.slice(7)}`];
+        .then((filePaths) => {
+            return filePaths
+                .filter((filePath) => filePath.slice(-4) === '.jsx')
+                .map((filePath) => {
+                    const sliceAmount = filePath.slice(-10) === '/index.jsx' ? -9 : -4;
+                    return [filePath.slice(12, sliceAmount), `./${filePath.slice(7)}`];
                 })
                 .map(([uri, filePath]) => {
                     return `    '${uri}': require('${filePath}'),\n`;
