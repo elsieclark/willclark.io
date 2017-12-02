@@ -4,10 +4,12 @@ console.time(label);
 
 const _     = require('lodash');
 const steps = require('vitreum/steps');
+const tree  = require('./tree.js');
 const Proj  = require('./project.json');
 const { libs, shared } = Proj;
 
 Promise.resolve()
+    .then(() => tree())
     .then(() => steps.clean())
     .then(() => steps.libs(Proj.libs))
     .then(() => Promise.all(_.map(Proj.entryPoints, (path, name) => {
