@@ -4,6 +4,8 @@ const createClass = require('create-react-class');
 const React       = require('react');
 const Link        = require('pico-router').Link;
 
+const profileImg = ('./assets/assets/portrait.jpg');
+
 const TopBar = createClass({
     getDefaultProps: function() {
         return {
@@ -81,7 +83,7 @@ const TopBar = createClass({
         return <div className='sidebar'>
             <div className='sideContent'>
                 <h3 className='siteTitle'>Will Clark</h3>
-                <img className='portrait' src='/main/portrait.jpg'/>
+                <img className='portrait' src={profileImg}/>
                 <h4 className='siteSubtitle'>Mechatronics Engineering Student</h4>
 
                 <nav className='pageLinkList'>

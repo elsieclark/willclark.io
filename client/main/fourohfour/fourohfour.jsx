@@ -6,6 +6,8 @@ const Break      = require('../../shared/components/break/break.jsx');
 const P          = require('../../shared/components/paragraph/paragraph.jsx');
 const TitleBlock = require('../../shared/components/titleblock/titleblock.jsx');
 
+const fourOhFourImg = ('./assets/assets/404.jpg');
+
 const Fourohfour = createClass({
     getDefaultProps: function() {
         return {
@@ -15,7 +17,7 @@ const Fourohfour = createClass({
     render: function() {
         return <div className='fourohfour'>
             <TitleBlock name='404 - Page Not Found' />
-            <img src='/main/404.jpg'/>
+            <img src={fourOhFourImg}/>
         </div>;
     }
 });
