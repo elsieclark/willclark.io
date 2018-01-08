@@ -35,7 +35,30 @@ const HomePage = createClass({
             <Break />
 
             <TitleBlock name='Stirling Engine: Mark III' date='April 21 2017'/>
-
+            <Paragraph>
+                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
+            </Paragraph>
+            <Paragraph>
+                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
+            </Paragraph>
+            <Paragraph>
+                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
+            </Paragraph>
+            <Paragraph>
+                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
+            </Paragraph>
+            <Paragraph>
+                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
+            </Paragraph>
+            <Paragraph>
+                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
+            </Paragraph>
+            <Paragraph>
+                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
+            </Paragraph>
+            <Paragraph>
+                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
+            </Paragraph>
         </div>;
     }
 });

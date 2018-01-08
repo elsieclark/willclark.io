@@ -6,7 +6,7 @@ const React        = require('react');
 
 const pages = require('../pages.jsx');
 
-const TopBar      = require('../shared/topbar/topbar.jsx');
+const SideBar      = require('../shared/sidebar/sidebar.jsx');
 const PageBody    = require('../shared/pagebody/pagebody.jsx');
 const PageContent = require('../shared/pagecontent/pagecontent.jsx');
 const LowBar      = require('../shared/lowbar/lowbar.jsx');
@@ -22,7 +22,16 @@ const navBarLinks = [
     },
     {
         name: 'Projects',
-        link: '/projects',
+        children: [
+            {
+                name: 'project1',
+                link: '/project1',
+            },
+            {
+                name: 'project2',
+                link: '/project2',
+            },
+        ]
     },
     {
         name: 'Résumé',
@@ -40,12 +49,12 @@ const Main = createClass({
 
     render: function() {
         return <div className='main'>
-            <TopBar pages={navBarLinks} />
+            <SideBar pages={navBarLinks} />
             <PageBody>
                 <PageContent>
                     <Router defaultUrl={this.props.url} />
                 </PageContent>
-                <LowBar />
+                {/*<LowBar />*/}
             </PageBody>
         </div>;
     },

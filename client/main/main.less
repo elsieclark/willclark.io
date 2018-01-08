@@ -4,7 +4,9 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: @bg-blue;
+    //background-color: @theme-dark-2;
+    background:radial-gradient(circle farthest-side at 0% 50%,@theme-dark-2 23.5%,rgba(240,166,17,0) 0)21px 30px,radial-gradient(circle farthest-side at 0% 50%,@theme-dark-1 24%,rgba(240,166,17,0) 0)19px 30px,linear-gradient(@theme-dark-2 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,@theme-dark-2 0)0 0,linear-gradient(150deg,@theme-dark-2 24%,@theme-dark-1 0,@theme-dark-1 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,@theme-dark-1 0,@theme-dark-1 76%,@theme-dark-2 0)0 0,linear-gradient(30deg,@theme-dark-2 24%,@theme-dark-1 0,@theme-dark-1 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,@theme-dark-1 0,@theme-dark-1 76%,@theme-dark-2 0)0 0,linear-gradient(90deg,@theme-dark-1 2%,@theme-dark-2 0,@theme-dark-2 98%,@theme-dark-1 0%)0 0 @theme-dark-2;
+    background-size:40px 60px;
     color: #111;
     font-family: 'Ubuntu', 'Helvetica', sans-serif;
     font-weight: 300;
@@ -12,9 +14,8 @@ body {
 
 .main {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     width: 100%;
     height: auto;
 }
