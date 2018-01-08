@@ -83,7 +83,9 @@ const TopBar = createClass({
         return <div className='sidebar'>
             <div className='sideContent'>
                 <h3 className='siteTitle'>Will Clark</h3>
-                <img className='portrait' src={profileImg}/>
+                <Link className='portraitLink' href='/'>
+                    <img className='portrait' src={profileImg}/>
+                </Link>
                 <h4 className='siteSubtitle'>Mechatronics Engineering Student</h4>
 
                 <nav className='pageLinkList'>
@@ -91,7 +93,7 @@ const TopBar = createClass({
                 </nav>
                 <div className='mediaLinks'></div>
                 <div className='filler' />
-                <p className='footer'><span>©</span> 2017 - Will Clark</p>
+                <p className='footer'><span>©</span> 2018 - Will Clark</p>
             </div>
 
         </div>;

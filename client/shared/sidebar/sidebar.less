@@ -32,16 +32,20 @@
             font-weight: 100;
             font-size: 19px;
             font-family: 'Source Code Pro';
-            margin: 4px 10px 20px 10px;
+            margin: 4px 8px 10px 14px;
+            align-self: center;
+        }
+        .portraitLink {
+            width: 90%;
             align-self: center;
         }
         .portrait {
-            width: 90%;
-            align-self: center;
+            width: 100%;
             border-radius: 5px;
             margin-top: 0px;
-            filter: sepia(50%);
+            filter: sepia(30%);
         }
+
         .pageLinkList {
             list-style: none;
             padding: 0;
@@ -70,7 +74,7 @@
                 text-decoration: none;
                 color: #222222;
                 &:hover {
-                    background-color: @theme-light-1;
+                    background-color: @theme-light-0;
                     color: #222222;
                 }
                 &.activePage {
@@ -119,9 +123,11 @@
                         border-bottom: 0px solid @theme-light-0;
                         &.childPageLink {
                             z-index: -1;
-                            height: 0px;
+                            //height: 0px;
+                            //max-height: 0px;
                             opacity: 0;
                             padding: 0;
+                            position: absolute;
                         }
                         &.categoryTitle {
                             height: 32px;
