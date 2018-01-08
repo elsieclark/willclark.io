@@ -27,29 +27,44 @@ const TopBar = createClass({
         });
     },
 
-    renderChildPageLinks: function(children) {
-        return _.map(children, (child) => {
-            return <Link className={cx('pageLink', { activePage: this.state.currentPage === child.link })}
-                    href={`${child.link}`}
-                    onClick={this.getCurrentPage}>
-                {child.name}
-            </Link>;
-        });
+    collapsePageGroup: function(evt) {
+        let target = evt.target;
+        if (target.getAttribute('class') === 'expandSymbol') {
+            target = target.parentNode;
+        }
+        target.setAttribute('value', `${target.getAttribute('value') === 'false'}`);
+        if (target.getAttribute('value') === 'true') {
+            target.parentNode.setAttribute('class', 'pageLinkCategory');
+            target.getElementsByClassName('expandSymbol')[0].innerHTML = '▲'
+        } else {
+            target.parentNode.setAttribute('class', 'pageLinkCategory collapsed');
+            target.getElementsByClassName('expandSymbol')[0].innerHTML = '▼'
+        }
     },
 
-    collapsePageGroup: function(evt) {
-        evt.target.setAttribute('value', evt.target.getAttribute('value') === 'false');
-
-        console.log('alpha', evt.target.getAttribute('value') === 'true');
+    renderChildPageLinks: function(children) {
+        return _.map(children, (child) => {
+            return <Link className={cx('pageLink childPageLink', { activePage: this.state.currentPage === child.link })}
+                    href={`${child.link}`}
+                    onClick={this.getCurrentPage}>
+                <div className='subpageTitle'>{child.name}</div>
+                <div className='subpageSubtitle'>{child.subtitle}</div>
+            </Link>;
+        });
     },
 
     renderPageLinks: function() {
         return _.map(this.props.pages, (page) => {
             if (page.children) {
-                return <div className='pageLinkCategory'>
-                    <div className='pageLink categoryTitle' onClick={this.collapsePageGroup} value={false}>
+                const categoryActive = page.children.reduce((acc, val) => {
+                    return acc || val.link === this.state.currentPage;
+                }, false);
+                return <div className={cx('pageLinkCategory', 'collapsed')}>
+                    <div className={cx('pageLink', 'categoryTitle', { activePage: categoryActive })}
+                            onClick={this.collapsePageGroup}
+                            value='false'>
                         {page.name}
-                        <div className='expandSymbol'>x</div>
+                        <div className='expandSymbol'>▼</div>
                     </div>
                     {this.renderChildPageLinks(page.children)}
                 </div>;

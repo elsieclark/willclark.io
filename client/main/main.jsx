@@ -9,7 +9,6 @@ const pages = require('../pages.jsx');
 const SideBar      = require('../shared/sidebar/sidebar.jsx');
 const PageBody    = require('../shared/pagebody/pagebody.jsx');
 const PageContent = require('../shared/pagecontent/pagecontent.jsx');
-const LowBar      = require('../shared/lowbar/lowbar.jsx');
 
 const Router = createRouter(_.mapValues(pages, (Value) => {
     return <Value/>;
@@ -25,10 +24,12 @@ const navBarLinks = [
         children: [
             {
                 name: 'project1',
+                subtitle: 'A project about stuff',
                 link: '/project1',
             },
             {
                 name: 'project2',
+                subtitle: 'A project about other stuff',
                 link: '/project2',
             },
         ]

@@ -49,6 +49,7 @@
             }
             .pageLink {
                 padding-left: 20px;
+                cursor: hand;
                 height: 32px;
                 //width: 100%;
                 display: flex;
@@ -57,9 +58,6 @@
                 border-bottom: 1px solid @theme-brown;
                 text-decoration: none;
                 color: #222222;
-                &:visited {
-                    color: #222222;
-                }
                 &:hover {
                     background-color: @theme-light-1;
                     color: #222222;
@@ -77,14 +75,42 @@
                 text-decoration: none;
                 border-bottom: 1px solid @theme-brown;
                 .pageLink {
-                    padding-left: 40px;
-                    border-bottom: 0px solid @theme-light-0;
-                    border-top: 1px solid #e3c782;
+                    &.childPageLink {
+                        height: 46px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: stretch;
+                        padding-left: 40px;
+                        border-bottom: 0px solid @theme-light-0;
+                        border-top: 1px solid #e3c782;
+                        .subpageTitle {
+                            margin-top: 4px;
+                        }
+                        .subpageSubtitle {
+                            color: @theme-dark-1;
+                            margin-bottom: 7px;
+                            font-size: 13px;
+                        }
+                    }
                     &.categoryTitle {
                         padding-left: 20px;
                         border-top: 0px solid @theme-light-0;
                         .expandSymbol {
                             margin-right: 16px;
+                        }
+                    }
+                }
+                &.collapsed {
+                    .pageLink {
+                        border-bottom: 0px solid @theme-light-0;
+                        &.childPageLink {
+                            z-index: -1;
+                            height: 0px;
+                            opacity: 0;
+                        }
+                        &.categoryTitle {
+                            height: 32px;
+                            opacity: 1;
                         }
                     }
                 }
