@@ -80,8 +80,10 @@ const TopBar = createClass({
     render: function() {
         return <div className='sidebar'>
             <div className='sideContent'>
-                <h3 className='siteTitle'>WillClark.io</h3>
-                <h4 className='siteSubtitle'>Will Clark's homepage</h4>
+                <h3 className='siteTitle'>Will Clark</h3>
+                <img className='portrait' src='/main/portrait.jpg'/>
+                <h4 className='siteSubtitle'>Mechatronics Engineering Student</h4>
+
                 <nav className='pageLinkList'>
                     {this.renderPageLinks()}
                 </nav>

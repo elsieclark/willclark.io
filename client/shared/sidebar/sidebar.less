@@ -1,6 +1,7 @@
 .sidebar {
     width: 40%;
-    max-width: 300px;
+    max-width: 260px;
+    min-width: 240px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -13,8 +14,8 @@
         margin: 20px 0 20px 20px;
         padding: 0px;
         flex-grow: 1;
-        width: 100%;
-        max-width: 280px;
+        //width: 100%;
+        width: 240px;
         background-color: @theme-light-2;
         border-radius: 5px;
         color: @theme-dark-2;
@@ -22,15 +23,26 @@
         display: flex;
         flex-direction: column;
         .siteTitle {
-            font-family: 'Ubuntu';
-            font-size: 40px;
+            font-family: 'Source Code Pro';
+            font-size: 36px;
             font-weight: 100;
             flex-grow: 0;
-            margin: 20px 0 6px 20px;
+            margin: 2px 0 0px 0px;
+            align-self: center;
         }
         .siteSubtitle {
             font-weight: 100;
-            margin: 0px 0 30px 20px;
+            font-size: 19px;
+            font-family: 'Source Code Pro';
+            margin: 4px 10px 20px 10px;
+            align-self: center;
+        }
+        .portrait {
+            width: 90%;
+            align-self: center;
+            border-radius: 5px;
+            margin-top: 0px;
+            filter: sepia(50%);
         }
         .pageLinkList {
             list-style: none;
@@ -76,19 +88,22 @@
                 border-bottom: 1px solid @theme-brown;
                 .pageLink {
                     &.childPageLink {
-                        height: 46px;
+                        height: 40px;
                         display: flex;
                         flex-direction: column;
                         align-items: stretch;
-                        padding-left: 40px;
+                        justify-content: space-around;
                         border-bottom: 0px solid @theme-light-0;
                         border-top: 1px solid #e3c782;
+                        padding: 4px 4px 4px 30px;
                         .subpageTitle {
-                            margin-top: 4px;
+                            //margin-top: 4px;
+                            margin: 0;
                         }
                         .subpageSubtitle {
                             color: @theme-dark-1;
-                            margin-bottom: 7px;
+                            margin: 0;
+                            //margin-bottom: 8px;
                             font-size: 13px;
                         }
                     }
@@ -107,6 +122,7 @@
                             z-index: -1;
                             height: 0px;
                             opacity: 0;
+                            padding: 0;
                         }
                         &.categoryTitle {
                             height: 32px;

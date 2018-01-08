@@ -2,6 +2,9 @@ const _           = require('lodash');
 const createClass = require('create-react-class');
 const React       = require('react');
 
+const Break      = require('../../shared/components/break/break.jsx');
+const P          = require('../../shared/components/paragraph/paragraph.jsx');
+const TitleBlock = require('../../shared/components/titleblock/titleblock.jsx');
 
 const Fourohfour = createClass({
     getDefaultProps: function() {
@@ -11,7 +14,8 @@ const Fourohfour = createClass({
     },
     render: function() {
         return <div className='fourohfour'>
-			Fourohfour Component Ready.
+            <TitleBlock name='404 - Page Not Found' />
+            <img src='/main/404.jpg'/>
         </div>;
     }
 });

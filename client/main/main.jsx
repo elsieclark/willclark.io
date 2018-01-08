@@ -23,20 +23,25 @@ const navBarLinks = [
         name: 'Projects',
         children: [
             {
-                name: 'project1',
-                subtitle: 'A project about stuff',
-                link: '/project1',
+                name: 'PromEth',
+                subtitle: 'Asynchronous Ethereum executor',
+                link: '/prometh',
             },
             {
-                name: 'project2',
-                subtitle: 'A project about other stuff',
-                link: '/project2',
+                name: 'Tetr.js',
+                subtitle: 'Machine learning to beat Tetris',
+                link: '/tetrjs',
+            },
+            {
+                name: 'Arbiter',
+                subtitle: 'Arbitrage trading bot for Bitcoin',
+                link: '/arbiter',
             },
         ]
     },
     {
         name: 'Résumé',
-        link: '/résumé'
+        link: '/otherpage', // résumé
     },
 ];
 
@@ -55,7 +60,6 @@ const Main = createClass({
                 <PageContent>
                     <Router defaultUrl={this.props.url} />
                 </PageContent>
-                {/*<LowBar />*/}
             </PageBody>
         </div>;
     },
