@@ -91,7 +91,17 @@ const TopBar = createClass({
                 <nav className='pageLinkList'>
                     {this.renderPageLinks()}
                 </nav>
-                <div className='mediaLinks'></div>
+                <div className='mediaLinks'>
+                    <a href='https://github.com/willdavidc'>
+                        <i className="mediaLink fa fa-github" aria-hidden="true" />
+                    </a>
+                    <a href='mailto:fire@willclark.io'>
+                        <i className="mediaLink mail fa fa-envelope" aria-hidden="true" />
+                    </a>
+                    <a href='https://www.linkedin.com/in/will-clark-04895a112/'>
+                        <i className="mediaLink fa fa-linkedin-square" aria-hidden="true" />
+                    </a>
+                </div>
                 <div className='filler' />
                 <p className='footer'><span>©</span> 2018 - Will Clark</p>
             </div>
