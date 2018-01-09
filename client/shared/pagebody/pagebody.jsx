@@ -7,9 +7,7 @@ const PageBody = createClass({
     render: function() {
         return (
             <div className='pagebody'>
-                <div className='scrollOuter'>
-                    {this.props.children}
-                </div>
+                {this.props.children}
             </div>
         );
     },

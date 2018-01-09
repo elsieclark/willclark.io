@@ -14,6 +14,8 @@ const Router = createRouter(_.mapValues(pages, (Value) => {
     return <Value/>;
 }));
 
+const fourOhFourImg = ('./assets/assets/404.jpg');
+
 const navBarLinks = [
     {
         name: 'Home',
@@ -61,6 +63,7 @@ const Main = createClass({
                     <Router defaultUrl={this.props.url} />
                 </PageContent>
             </PageBody>
+            <img className='lazyImage' src={fourOhFourImg} />
         </div>;
     },
 });//
