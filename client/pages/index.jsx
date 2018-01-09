@@ -26,7 +26,7 @@ const HomePage = createClass({
                     Okay, now I've got a line break in here too. Let's see how that works. In addition, I'll put some quite short words, and additionally some exceedingly interminable vocabulary. Now that's done, there's no alternative but to keep talking about some dull stuff.
             </Paragraph>
 
-            <Break height='5px' />
+            <Break />
 
             <Paragraph>
                     Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
