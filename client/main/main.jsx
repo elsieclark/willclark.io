@@ -57,6 +57,7 @@ const Main = createClass({
 
     render: function() {
         return <div className='main'>
+            <div className='background' />
             <SideBar pages={navBarLinks} />
             <PageBody>
                 <PageContent>
