@@ -71,6 +71,13 @@ const TopBar = createClass({
                     {this.renderChildPageLinks(page.children)}
                 </div>;
             }
+            if (page.ext) {
+                return <a className={cx('pageLink')}
+                            href={`${page.link}`}
+                            onClick={this.getCurrentPage}>
+                    {page.name}
+                </a>
+            }
             return <Link className={cx('pageLink', { activePage: this.state.currentPage === page.link })}
                     href={`${page.link}`}
                     onClick={this.getCurrentPage}>

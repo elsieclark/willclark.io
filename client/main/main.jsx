@@ -39,11 +39,17 @@ const navBarLinks = [
                 subtitle: 'Arbitrage trading bot for Bitcoin',
                 link: '/arbiter',
             },
+            {
+                name: 'Slamster',
+                subtitle: 'Autonomous 2-wheeled robot',
+                link: '/slamster',
+            },
         ]
     },
     {
         name: 'Résumé',
-        link: '/otherpage', // résumé
+        link: 'localhost:8000/assets/résumé.pdf',
+        ext: true,
     },
 ];
 
