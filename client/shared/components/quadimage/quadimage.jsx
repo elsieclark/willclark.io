@@ -4,6 +4,8 @@ const React       = require('react');
 
 const QuadImage = createClass({
 
+
+
     renderImage: function(image) {
         return <div className='imageBox'><img src={image.src} height={image.height} width={image.width}/></div>;
     },
