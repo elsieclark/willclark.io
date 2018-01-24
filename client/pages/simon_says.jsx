@@ -6,6 +6,8 @@ const Break      = require('../shared/components/break/break.jsx');
 const P  = require('../shared/components/paragraph/paragraph.jsx');
 const H2  = require('../shared/components/subheading/subheading.jsx');
 const Video  = require('../shared/components/video/video.jsx');
+const TriImage  = require('../shared/components/triimage/triimage.jsx');
+const QuadImage  = require('../shared/components/quadimage/quadimage.jsx');
 const TitleBlock = require('../shared/components/titleblock/titleblock.jsx');
 const TechBlock = require('../shared/components/techblock/techblock.jsx');
 
@@ -55,9 +57,9 @@ const HomePage = createClass({
 
             <P>
                 Between midday on June 26, 2016, and 2 PM the following afternoon, I participated in the University of
-                Waterloo's EngHack hackathon with good friend and fellow Mechatronics Engineering student Geoff
-                Spielman. Over that 26 hour period we created this project: a multi-platform, interconnected game of
-                Simon Says.
+                Waterloo's EngHack hackathon with good friend and fellow Mechatronics
+                Engineering student <a href='http://geoffspielman.com'>Geoff Spielman</a>. Over that 26 hour period we
+                created this project: a multi-platform, interconnected game of Simon Says.
 
             </P>
             <Video src='https://www.youtube.com/embed/pmWjzaiKxCw?rel=0&amp;showinfo=0'/>
@@ -79,7 +81,25 @@ const HomePage = createClass({
                 blue, which work as both the lights and the buttons. The app also prompts the user at each stage of the
                 game, and at the start, it instructs the player to tap out a sequence of length 4.
 
-                <span className='br' />
+            </P>
+            <TriImage images={[
+                {
+                    src: '/assets/assets/simon_says/ios_screenshot_01.jpg',
+                    width: 320,
+                    height: 568,
+                },
+                {
+                    src: '/assets/assets/simon_says/ios_screenshot_02.jpg',
+                    width: 320,
+                    height: 568,
+                },
+                {
+                    src: '/assets/assets/simon_says/ios_screenshot_03.jpg',
+                    width: 320,
+                    height: 568,
+                },
+            ]}/>
+            <P>
 
                 When this sequence has been entered, the app packages the sequence into an array of numerical values,
                 and converts that output into a JSON string. Then, using a SocketIO library for Swift, it emits the
@@ -93,7 +113,30 @@ const HomePage = createClass({
                 turn. The Python script decodes the message into a list, and transmits the sequence to a connected
                 Arduino via the serial connector.
 
-                <span className='br' />
+            </P>
+            <QuadImage images={[
+                {
+                    src: '/assets/assets/simon_says/setup_photo_01.jpg',
+                    width: 600,
+                    height: 450,
+                },
+                {
+                    src: '/assets/assets/simon_says/setup_photo_02.jpg',
+                    width: 600,
+                    height: 450,
+                },
+                {
+                    src: '/assets/assets/simon_says/setup_photo_03.jpg',
+                    width: 600,
+                    height: 450,
+                },
+                {
+                    src: '/assets/assets/simon_says/setup_photo_04.jpg',
+                    width: 600,
+                    height: 450,
+                },
+            ]}/>
+            <P>
 
                 The Arduino displays the sequence on four coloured LEDs (red, yellow, green, and blue, as before),
                 waits for the player to respond, checks if they got it right, and if so, allows the second player to
