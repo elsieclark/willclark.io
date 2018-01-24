@@ -5,7 +5,7 @@ const React       = require('react');
 const TitleBlock = createClass({
 
     render: function() {
-        const style = this.props.height ? { height: this.props.height } : {};
+        const style = { marginTop: this.props.height || 0 };
         return (
             <div className='break' style={style}>
             </div>

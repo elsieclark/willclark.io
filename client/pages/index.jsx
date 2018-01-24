@@ -3,7 +3,9 @@ const createClass = require('create-react-class');
 const React       = require('react');
 
 const Break      = require('../shared/components/break/break.jsx');
-const Paragraph  = require('../shared/components/paragraph/paragraph.jsx');
+const P  = require('../shared/components/paragraph/paragraph.jsx');
+const Image  = require('../shared/components/image/image.jsx');
+const TriImage  = require('../shared/components/triimage/triimage.jsx');
 const TitleBlock = require('../shared/components/titleblock/titleblock.jsx');
 
 
@@ -15,50 +17,23 @@ const HomePage = createClass({
     },
     render: function() {
         return <div className='homepage'>
+            <P>
+                <span className='br' />
+                <span className='br' />
+                <span className='massive'>Hi! I'm Will,</span>  and I'm a Mechatronics Engineering student at the
+                University of Waterloo. I like coding, rock climbing, and fabricating miniature spaceships on my 3D
+                printer. Welcome, to my personal website.
+            </P>
+            <Image src='/assets/assets/skiing_wide.jpg' width='1920' height='1080' wide='true'/>
+            <P>
+                Mechatronics Engineering is a co-op program, which means I'm currently looking for work. More
+                specifically, 16 weeks of work, from May to August, 2018. I've got a pretty diverse set of technical
+                skills, with over 12 months of work placement under by belt, as well as an affinity for public speaking
+                and a head for prototyping and design. If that sounds like someone you could use, you can download
+                my résumé from the sidebar, and please get in contact.
+            </P>
 
-            <TitleBlock name='Stirling Engine: Mark II' date='April 19 2017'/>
-
-            <Paragraph>
-                    This is just some perfectly ordinary body text that describes my awesomely operational stirling engine. Hooray for sample text. But I'm going to keep writing words here for a while, and try some different things to make this paragraph longer than it already is.
-            </Paragraph>
-
-            <Paragraph>
-                    Okay, now I've got a line break in here too. Let's see how that works. In addition, I'll put some quite short words, and additionally some exceedingly interminable vocabulary. Now that's done, there's no alternative but to keep talking about some dull stuff.
-            </Paragraph>
-
-            <Break />
-
-            <Paragraph>
-                    Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
-
-            <Break />
-
-            <TitleBlock name='Stirling Engine: Mark III' date='April 21 2017'/>
-            <Paragraph>
-                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
-            <Paragraph>
-                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
-            <Paragraph>
-                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
-            <Paragraph>
-                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
-            <Paragraph>
-                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
-            <Paragraph>
-                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
-            <Paragraph>
-                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
-            <Paragraph>
-                Now there's some more text, but it's after the page break. This is mainly just to see how well the spacing of the different paragraphs works when this thing gets in the middle.
-            </Paragraph>
+            <P>Beyond that, thanks for stopping by. Feel free to take a look around while you're here!</P>
         </div>;
     }
 });

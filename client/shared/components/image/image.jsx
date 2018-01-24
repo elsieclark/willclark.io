@@ -7,7 +7,7 @@ const Image = createClass({
     render: function() {
         return <div className='imageWrapper' style={{backgroundColor: (this.props.background || 'inherit')}}>
             <p className='caption'>{this.props.caption}</p>
-            <div className='image'>
+            <div className={'image' + (this.props.wide ? ' wide' : '')}>
                 <img src={this.props.src}
                      height={this.props.height}
                      width={this.props.width}/>

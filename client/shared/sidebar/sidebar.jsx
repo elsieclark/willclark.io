@@ -76,7 +76,7 @@ const TopBar = createClass({
                             href={`${page.link}`}
                             onClick={this.getCurrentPage}>
                     {page.name}
-                </a>
+                </a>;
             }
             return <Link className={cx('pageLink', { activePage: this.state.currentPage === page.link })}
                     href={`${page.link}`}

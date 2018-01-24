@@ -24,16 +24,11 @@ const navBarLinks = [
     {
         name: 'Projects',
         children: [
-            {
+            /*{
                 name: 'Tetr.js',
                 subtitle: 'Machine learning to beat Tetris',
                 link: '/tetrjs',
-            },
-            {
-                name: 'Arbiter',
-                subtitle: 'Arbitrage trading bot for Bitcoin',
-                link: '/arbiter',
-            },
+            },*/
             {
                 name: 'Slamster',
                 subtitle: 'Autonomous 2-wheeled robot',
@@ -48,7 +43,7 @@ const navBarLinks = [
     },
     {
         name: 'Résumé',
-        link: 'localhost:8000/assets/résumé.pdf',
+        link: '/résumé.pdf',
         ext: true,
     },
 ];
