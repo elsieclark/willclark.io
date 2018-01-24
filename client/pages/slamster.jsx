@@ -5,28 +5,7 @@ const React       = require('react');
 const Break      = require('../shared/components/break/break.jsx');
 const P  = require('../shared/components/paragraph/paragraph.jsx');
 const TitleBlock = require('../shared/components/titleblock/titleblock.jsx');
-const TechBlock = require('../shared/components/techblock/techblock.jsx');
 
-const techs = [
-    {
-        name: 'Node.js (ES7)',
-        link: 'https://nodejs.org/en/',
-        logo: '/assets/assets/icons/nodejs.png',
-    },
-    {
-        name: 'SuperQueue',
-        link: 'https://github.com/willdavidc/superqueue',
-        logo: 'fa fa-github',
-    }
-];
-
-const links = [
-    {
-        name: 'GitHub',
-        link: 'https://github.com/willdavidc/arbitcoiner',
-        logo: 'fa fa-github',
-    }
-];
 
 const HomePage = createClass({
     getDefaultProps: function() {
@@ -37,9 +16,7 @@ const HomePage = createClass({
     render: function() {
         return <div className='homepage'>
 
-            <TitleBlock name='Arbiter' date='December 2017'/>
-
-            <TechBlock techs={techs} links={links} />
+            <TitleBlock name='Slamster' date='January 2018'/>
 
             <P>
                 Normally, effective trading in financial markets revolves around a simple idea: buy low, and sell

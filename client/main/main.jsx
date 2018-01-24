@@ -25,11 +25,6 @@ const navBarLinks = [
         name: 'Projects',
         children: [
             {
-                name: 'PromEth',
-                subtitle: 'Asynchronous Ethereum executor',
-                link: '/prometh',
-            },
-            {
                 name: 'Tetr.js',
                 subtitle: 'Machine learning to beat Tetris',
                 link: '/tetrjs',
@@ -43,6 +38,11 @@ const navBarLinks = [
                 name: 'Slamster',
                 subtitle: 'Autonomous 2-wheeled robot',
                 link: '/slamster',
+            },
+            {
+                name: 'Simon Says',
+                subtitle: 'Multi-platform memory game',
+                link: '/simon_says',
             },
         ]
     },

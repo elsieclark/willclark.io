@@ -1,0 +1,120 @@
+.techBlockWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 6px;
+    a:link, a:visited {
+        text-decoration: none;
+        color: black;
+    }
+    .techBlock {
+        width: 96%;
+        background-color: @theme-light--1;
+        border: 1px solid @theme-dark-0;
+        display: flex;
+        border-radius: 6px;
+        .techsOuter {
+            display: flex;
+            flex-direction: column;
+            min-width: 75%;
+            flex-grow: 1;
+            .techsLabel {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid @theme-dark-0;
+                p {
+                    margin: 0;
+                    padding: 3px 0 3px 0;
+                    font-size: 18px;
+                }
+            }
+            .techs {
+                padding: 5px;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                //background-color: red;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: flex-start;
+                .tech {
+                    display: flex;
+                    //background-color: pink;
+                    align-items: center;
+                    margin: 3px;
+                    padding: 4px;
+                    border-radius: 6px;
+                    border: 1px solid rgba(0,0,0,0);
+                    cursor: pointer;
+                    &:hover {
+                        border: 1px solid @theme-dark-0;
+                    }
+                    .techLogo {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 2px;
+                        font-size: 30px;
+                        text-align: center;
+                    }
+                    .techName {
+                        padding: 0;
+                        margin: 0 0 0 5px;
+                    }
+                }
+            }
+        }
+
+        .linksOuter {
+            display: flex;
+            flex-direction: column;
+            min-width: 20%;
+            flex-grow: 1;
+            border-left: 1px solid @theme-dark-0;
+            .linksLabel {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid @theme-dark-0;
+                p {
+                    margin: 0;
+                    padding: 3px 0 3px 0;
+                    font-size: 18px;
+                }
+            }
+            .links {
+                padding: 5px;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .link {
+                    display: flex;
+                    align-items: center;
+                    margin: 3px;
+                    padding: 4px;
+                    border-radius: 6px;
+                    border: 1px solid rgba(0, 0, 0, 0);
+                    cursor: pointer;
+                    &:hover {
+                        border: 1px solid @theme-dark-0;
+                    }
+                    .linkLogo {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 2px;
+                        font-size: 30px;
+                        text-align: center;
+                    }
+                    .linkName {
+                        padding: 0;
+                        margin: 0 0 0 5px;
+                    }
+                }
+            }
+        }
+    }
+}
