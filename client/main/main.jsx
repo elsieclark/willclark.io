@@ -1,7 +1,6 @@
 const _            = require('lodash');
 const createClass  = require('create-react-class');
 const createRouter = require('pico-router').createRouter;
-const Link         = require('pico-router').Link;
 const React        = require('react');
 
 const pages = require('../pages.jsx');
